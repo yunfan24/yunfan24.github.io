@@ -1,26 +1,12 @@
-
-<!DOCTYPE html><html lang="zh-CN">
-
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1" theme-name="Stellar" theme-version="1.29.1">
   
-  <meta name="generator" content="Hexo 7.1.1">
-  <meta http-equiv='x-dns-prefetch-control' content='on' />
   
-  <meta name="renderer" content="webkit">
-  <meta name="force-rendering" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="HandheldFriendly" content="True" >
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
-  <meta name="theme-color" content="#f9fafb">
-  
-  <title>远程连接终端——WindTerm安装使用教程 - 追逐日落</title>
-
-  
-    <meta name="description" content="前言最近在使用xshell时，偶尔需要传输一下文件。然而，由于Xshell和Xftp是分开的，这就有些不太方便。于是找到了这个集SSH和SFTP一体的工具——WindTerm。开源免费，跨平台，支持 Windows、Linux 和 macOS，启动速度快。除此之外还有命令提示补全功能（根据历史命令）。">
+  <title>远程连接终端——WindTerm安装使用教程 | 追逐日落</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="前言最近在使用xshell时，偶尔需要传输一下文件。然而，由于Xshell和Xftp是分开的，这就有些不太方便。于是找到了这个集SSH和SFTP一体的工具——WindTerm。开源免费，跨平台，支持 Windows、Linux 和 macOS，启动速度快。除此之外还有命令提示补全功能（根据历史命令）。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="远程连接终端——WindTerm安装使用教程">
 <meta property="og:url" content="https://zzrl.cc/posts/f682a309/index.html">
@@ -42,71 +28,97 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.zzrl.cc/img/image-20240304105603054.webp">
   
-  
-  
-  <meta name="keywords" content="工具,安装教程">
-
-  <!-- feed -->
-  
     <link rel="alternate" href="/atom.xml" title="追逐日落" type="application/atom+xml">
   
-
-  <link rel="stylesheet" href="/css/main.css?v=1.29.1">
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
   
-
-  
-
-  
-</head>
-<body>
-
-<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
-
-
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">追逐日落</div><div class="sub cap">拨云现日，云上看景</div></a></div></header>
-
-<div class="nav-area">
-<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
-
-
-<nav class="menu dis-select"></nav>
-</div>
-<div class="widgets">
-
-
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/20a80768/"><span class="title">写给软件234，也给两年前的自己</span></a><a class="item title" href="/posts/f512793/"><span class="title">SpringBoot中使用自定义注解和拦截器实现简单的权限控制</span></a><a class="item title" href="/posts/d4439880/"><span class="title">在Linux上创建新用户并配置SSH免密连接</span></a><a class="item title" href="/posts/f682a309/"><span class="title">远程连接终端——WindTerm安装使用教程</span></a><a class="item title" href="/posts/ff1f1596/"><span class="title">如何高效检索信息：搜索引擎使用小技巧</span></a></div></widget>
-</div>
-
-</div></aside><div class="l_main" id="main">
-
-
-
-
-
-<div class="article banner top">
-  <div class="content">
-    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">开发工具</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-03-04T04:02:56.000Z">2024-03-04</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-03-15T01:44:59.638Z">2024-03-15</time></span></div></div></div>
     
-    <div class="bottom only-title">
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">追逐日落</a>
+      </h1>
       
-      <div class="text-area">
-        <h1 class="text title"><span>远程连接终端——WindTerm安装使用教程</span></h1>
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">拨云现日，云上看景</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
         
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://zzrl.cc"></form>
       </div>
     </div>
-    
   </div>
-  </div><article class="md-text content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在使用xshell时，偶尔需要传输一下文件。然而，由于Xshell和Xftp是分开的，这就有些不太方便。于是找到了这个集SSH和SFTP一体的工具——WindTerm。开源免费，跨平台，支持 Windows、Linux 和 macOS，启动速度快。除此之外还有命令提示补全功能（根据历史命令）。</p>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-开发工具/远程连接终端——WindTerm安装使用教程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/posts/f682a309/" class="article-date">
+  <time class="dt-published" datetime="2024-03-04T04:02:56.000Z" itemprop="datePublished">2024-03-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">开发工具</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      远程连接终端——WindTerm安装使用教程
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在使用xshell时，偶尔需要传输一下文件。然而，由于Xshell和Xftp是分开的，这就有些不太方便。于是找到了这个集SSH和SFTP一体的工具——WindTerm。开源免费，跨平台，支持 Windows、Linux 和 macOS，启动速度快。除此之外还有命令提示补全功能（根据历史命令）。</p>
 <span id="more"></span>
 <p>官方介绍</p>
 <blockquote>
 <p>A Quicker and better SSH&#x2F;Telnet&#x2F;Serial&#x2F;Shell&#x2F;Sftp client for DevOps.</p>
 <p>WindTerm是一个更快、更好的SSH&#x2F;Telnet&#x2F;Serial&#x2F;Shell&#x2F;SFTP客户端，专为DevOps而设计。<br>预览图</p>
 </blockquote>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.zzrl.cc/img/image-20240304105603054.webp" alt="image-20240304105603054"></p>
+<p><img src="https://i.zzrl.cc/img/image-20240304105603054.webp" alt="image-20240304105603054"></p>
 <h2 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h2><p>开源项目，<a target="_blank" rel="noopener" href="https://github.com/kingToolbox/WindTerm/releases">官方下载地址</a>，截止文章编辑时，Star数19.5k。</p>
 <p>以win11为例，下载x86_64版本，解压缩后点击<code>WindTerm.exe</code>即可使用</p>
 <h2 id="使用配置"><a href="#使用配置" class="headerlink" title="使用配置"></a>使用配置</h2><h3 id="锁屏密码"><a href="#锁屏密码" class="headerlink" title="锁屏密码"></a>锁屏密码</h3><p>WindTerm有30分钟锁定机制，闲置30分钟之后需要输入密码解锁，安装好后要首先设置一个密码，点击主界面右下角锁屏-更改主密码，旧密码留空，输入新密码、确认密码后点击更改即可。</p>
@@ -122,511 +134,169 @@
 </li>
 </ol>
 <p>这里与Xshell不同，连接的用户名并不在会话中填写，而是与Onekey绑定，故这里只需填写主机和端口。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.zzrl.cc/img/image-20240304102815814.webp" alt="image-20240304102815814"></p>
+<p><img src="https://i.zzrl.cc/img/image-20240304102815814.webp" alt="image-20240304102815814"></p>
 <p><strong>OneKey</strong>，类似xshell中的用户密钥管理，或者浏览器的密码管理器，用于集中存放用户的认证凭据。首次设置，点击输入框中的设置图标，点击左下角设置OneKey管理器密码，设置好之后，点击左下角加号即可添加，之后选择对应onekey连接即可。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.zzrl.cc/img/IOXbED2ZMinSusd-1708400331284-25.webp" alt="image-20240217102929048"></p>
+<p><img src="https://i.zzrl.cc/img/IOXbED2ZMinSusd-1708400331284-25.webp" alt="image-20240217102929048"></p>
 <h3 id="界面设置"><a href="#界面设置" class="headerlink" title="界面设置"></a>界面设置</h3><p>日常使用时，可能有很多功能用不到，实际最多使用的也就SSH是和文件管理，可以根据使用习惯把不需要的都关掉，节省屏幕空间。</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.zzrl.cc/img/j8yD6N4A2vYTzMq.webp" alt="image-20240217103043313" style="zoom: 67%;" />
+<img src="https://i.zzrl.cc/img/j8yD6N4A2vYTzMq.webp" alt="image-20240217103043313" style="zoom: 67%;" />
 
 <p>右上角专注模式旁边的按钮，点击即可设置界面，可以按照自己喜好保留、关闭菜单，按照上面图中设置，效果如下</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.zzrl.cc/img/bRBqvfSI238KZeL.webp" alt="image-20240217103157950"></p>
+<p><img src="https://i.zzrl.cc/img/bRBqvfSI238KZeL.webp" alt="image-20240217103157950"></p>
 <h3 id="自动复制"><a href="#自动复制" class="headerlink" title="自动复制"></a>自动复制</h3><p>会话-首选项-设置-文本-自动复制选定内容 即可开启自动复制，开启后在命令行中选中文本即可自动复制到剪切板。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.zzrl.cc/img/j7TxwJZ3rEHPpof.webp" alt="image-20240217103216844"></p>
+<p><img src="https://i.zzrl.cc/img/j7TxwJZ3rEHPpof.webp" alt="image-20240217103216844"></p>
 <h3 id="会话空闲保活"><a href="#会话空闲保活" class="headerlink" title="会话空闲保活"></a>会话空闲保活</h3><p>长时间无操作闲置会话，可能会导致主机断开连接，造成命令行界面卡住，可以开启会话保活，在会话-首选项-默认会话设置-SSH-连接-发送空包以保持会话活动，设置15，即15秒自动发空包保持会话存活。</p>
 <h2 id="其他内容"><a href="#其他内容" class="headerlink" title="其他内容"></a>其他内容</h2><p>在连接新装系统的主机时，如果遇到无法连接的情况，检查ssh服务是否安装并启动，可以使用<code>systemctl status ssh</code> 查看ssh状态，效果如下</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.zzrl.cc/img/image-20240220114000634.webp" alt="image-20240220114000634"></p>
+<p><img src="https://i.zzrl.cc/img/image-20240220114000634.webp" alt="image-20240220114000634"></p>
 <p>若无ssh服务，ubuntu系统下，执行<code>sudo apt install openssh-server</code> 安装ssh服务后即可连接。</p>
 <p>如果ssh服务没有问题，请检查防火墙是不是没有放行相应端口，新建会话时填写的ip地址是否正确。</p>
 <p>使用过程中，若遇到软件方面的其他问题，可在<a target="_blank" rel="noopener" href="https://github.com/kingToolbox/WindTerm/issues">官方仓库Issues</a>尝试寻找解决方案。</p>
 
-<div class="article-footer fs14">
-    <section id="license">
-      <div class="header"><span>许可协议</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
-</div>
-    </section>
+      
     </div>
-</article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/ff1f1596/">如何高效检索信息：搜索引擎使用小技巧</a></div><div class="item" id="next"></div></section></div>
+    <footer class="article-footer">
+      <a data-url="https://zzrl.cc/posts/f682a309/" data-id="cm5tsobsu0009kojf68tv7xy8" data-title="远程连接终端——WindTerm安装使用教程" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" rel="tag">安装教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a></li></ul>
 
-
-
-
-
-
-<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">云景</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1">Stellar 1.29.1</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
-</div></footer>
-<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-<div class="widgets">
-
-
-
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85"><span class="toc-text">下载安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE"><span class="toc-text">使用配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%81%E5%B1%8F%E5%AF%86%E7%A0%81"><span class="toc-text">锁屏密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E4%BC%9A%E8%AF%9D"><span class="toc-text">新建会话</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE"><span class="toc-text">界面设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%A4%8D%E5%88%B6"><span class="toc-text">自动复制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%9A%E8%AF%9D%E7%A9%BA%E9%97%B2%E4%BF%9D%E6%B4%BB"><span class="toc-text">会话空闲保活</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%86%85%E5%AE%B9"><span class="toc-text">其他内容</span></a></li></ol></div><div class="widget-footer">
-
-<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
-</div></aside><div class='float-panel blur'>
-  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
-  </button>
-  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
-  </button>
-</div>
-</div><div class="scripts">
-<script type="text/javascript">
-  const ctx = {
-    date_suffix: {
-      just: `刚刚`,
-      min: `分钟前`,
-      hour: `小时前`,
-      day: `天前`,
-    },
-    root : `/`,
-  };
-
-  // required plugins (only load if needs)
-  if (`local_search`) {
-    ctx.search = {};
-    ctx.search.service = `local_search`;
-    if (ctx.search.service == 'local_search') {
-      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
-      ctx.search[ctx.search.service] = service_obj;
-    }
-  }
-  const def = {
-    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
-    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
-  };
-  const deps = {
-    jquery: `https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js`,
-    marked: `https://cdn.jsdelivr.net/npm/marked@13.0.1/lib/marked.umd.min.js`
-  }
+    </footer>
+  </div>
   
-
-</script>
-
-<script type="text/javascript">
-  const utils = {
-    // 懒加载 css https://github.com/filamentgroup/loadCSS
-    css: (href, before, media, attributes) => {
-      var doc = window.document;
-      var ss = doc.createElement("link");
-      var ref;
-      if (before) {
-        ref = before;
-      } else {
-        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
-        ref = refs[refs.length - 1];
-      }
-      var sheets = doc.styleSheets;
-      if (attributes) {
-        for (var attributeName in attributes) {
-          if (attributes.hasOwnProperty(attributeName)) {
-            ss.setAttribute(attributeName, attributes[attributeName]);
-          }
-        }
-      }
-      ss.rel = "stylesheet";
-      ss.href = href;
-      ss.media = "only x";
-      function ready(cb) {
-        if (doc.body) {
-          return cb();
-        }
-        setTimeout(function () {
-          ready(cb);
-        });
-      }
-      ready(function () {
-        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
-      });
-      var onloadcssdefined = function (cb) {
-        var resolvedHref = ss.href;
-        var i = sheets.length;
-        while (i--) {
-          if (sheets[i].href === resolvedHref) {
-            return cb();
-          }
-        }
-        setTimeout(function () {
-          onloadcssdefined(cb);
-        });
-      };
-      function loadCB() {
-        if (ss.addEventListener) {
-          ss.removeEventListener("load", loadCB);
-        }
-        ss.media = media || "all";
-      }
-      if (ss.addEventListener) {
-        ss.addEventListener("load", loadCB);
-      }
-      ss.onloadcssdefined = onloadcssdefined;
-      onloadcssdefined(loadCB);
-      return ss;
-    },
-
-    js: (src, opt) => new Promise((resolve, reject) => {
-      var script = document.createElement('script');
-      if (src.startsWith('/')){
-        src = ctx.root + src.substring(1);
-      }
-      script.src = src;
-      if (opt) {
-        for (let key of Object.keys(opt)) {
-          script[key] = opt[key]
-        }
-      } else {
-        // 默认异步，如果需要同步，第二个参数传入 {} 即可
-        script.async = true
-      }
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    }),
-
-    jq: (fn) => {
-      if (typeof jQuery === 'undefined') {
-        utils.js(deps.jquery).then(fn)
-      } else {
-        fn()
-      }
-    },
     
-    onLoading: (el) => {
-      if (el) {
-        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
-      }
-    },
-    onLoadSuccess: (el) => {
-      if (el) {
-        $(el).find('.loading-wrap').remove();
-      }
-    },
-    onLoadFailure: (el) => {
-      if (el) {
-        $(el).find('.loading-wrap svg').remove();
-        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
-        $(el).find('.loading-wrap').addClass('error');
-      }
-    },
-    request: (el, url, callback, onFailure) => {
-      let retryTimes = 3;
-      utils.onLoading(el);
-      function req() {
-        return new Promise((resolve, reject) => {
-          let status = 0; // 0 等待 1 完成 2 超时
-          let timer = setTimeout(() => {
-            if (status === 0) {
-              status = 2;
-              timer = null;
-              reject('请求超时');
-              if (retryTimes == 0) {
-                onFailure();
-              }
-            }
-          }, 5000);
-          fetch(url).then(function(response) {
-            if (status !== 2) {
-              clearTimeout(timer);
-              resolve(response);
-              timer = null;
-              status = 1;
-            }
-            if (response.ok) {
-              return response.json();
-            }
-            throw new Error('Network response was not ok.');
-          }).then(function(data) {
-            retryTimes = 0;
-            utils.onLoadSuccess(el);
-            callback(data);
-          }).catch(function(error) {
-            if (retryTimes > 0) {
-              retryTimes -= 1;
-              setTimeout(() => {
-                req();
-              }, 5000);
-            } else {
-              utils.onLoadFailure(el);
-              onFailure();
-            }
-          });
-        });
-      }
-      req();
-    },
-  };
-</script>
-
-<script>
-  const sidebar = {
-    leftbar: () => {
-      if (l_body) {
-        l_body.toggleAttribute('leftbar');
-        l_body.removeAttribute('rightbar');
-      }
-    },
-    rightbar: () => {
-      if (l_body) {
-        l_body.toggleAttribute('rightbar');
-        l_body.removeAttribute('leftbar');
-      }
-    },
-    dismiss: () => {
-      if (l_body) {
-        l_body.removeAttribute('leftbar');
-        l_body.removeAttribute('rightbar');
-      }
-    },
-    toggleTOC: () => {
-      document.querySelector('#data-toc').classList.toggle('collapse');
-    }
-  }
-</script>
-<script type="text/javascript">
-  (() => {
-    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
-    for (const tagSwitcher of tagSwitchers) {
-      tagSwitcher.addEventListener('click', (e) => {
-        const parent = e.target.closest('.tag-subtree.parent-tag')
-        parent.classList.toggle('expanded')
-        e.preventDefault()
-      })
-    }
-
-    // Get active tag from query string, then activate it.
-    const urlParams = new URLSearchParams(window.location.search)
-    const activeTag = urlParams.get('tag')
-    if (activeTag) {
-      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
-      if (tag) {
-        tag.querySelector('a').classList.add('active')
+<nav id="article-nav">
+  
+    <a href="/posts/ff1f1596/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
         
-        while (tag) {
-          tag.classList.add('expanded')
-          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
-        }
-      }
-    }
-  })()
-</script>
+          如何高效检索信息：搜索引擎使用小技巧
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
 
 
-<!-- required -->
-<script src="/js/main.js?v=1.29.1" defer></script>
-
-<script type="text/javascript">
-  const applyTheme = (theme) => {
-    if (theme === 'auto') {
-      document.documentElement.removeAttribute('data-theme')
-    } else {
-      document.documentElement.setAttribute('data-theme', theme)
-    }
-
-    applyThemeToGiscus(theme)
-  }
-
-  const applyThemeToGiscus = (theme) => {
-    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
-
-    const cmt = document.getElementById('giscus')
-    if (cmt) {
-      // This works before giscus load.
-      cmt.setAttribute('data-theme', theme)
-    }
-
-    const iframe = document.querySelector('#comments > section.giscus > iframe')
-    if (iframe) {
-      // This works after giscus loaded.
-      const src = iframe.src
-      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
-      iframe.src = newSrc
-    }
-  }
-
-  const switchTheme = () => {
-    // light -> dark -> auto -> light -> ...
-    const currentTheme = document.documentElement.getAttribute('data-theme')
-    let newTheme;
-    switch (currentTheme) {
-      case 'light':
-        newTheme = 'dark'
-        break
-      case 'dark':
-        newTheme = 'auto'
-        break
-      default:
-        newTheme = 'light'
-    }
-    applyTheme(newTheme)
-    window.localStorage.setItem('Stellar.theme', newTheme)
-
-    const messages = {
-      light: `切换到浅色模式`,
-      dark: `切换到深色模式`,
-      auto: `切换到跟随系统配色`,
-    }
-    hud?.toast?.(messages[newTheme])
-  }
-
-  (() => {
-    // Apply user's preferred theme, if any.
-    const theme = window.localStorage.getItem('Stellar.theme')
-    if (theme !== null) {
-      applyTheme(theme)
-    }
-  })()
-</script>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/springboot/">springboot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">开发工具</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%80%BB%E7%BB%93/">总结</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li></ul>
+    </div>
+  </div>
 
 
-<!-- optional -->
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/" rel="tag">SSH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sudo/" rel="tag">sudo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81%E4%BA%BA%E7%94%9F/" rel="tag">代码人生</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" rel="tag">安装教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8B%A6%E6%88%AA%E5%99%A8/" rel="tag">拦截器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/" rel="tag">搜索引擎</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%90%9C%E7%B4%A2%E8%AF%AD%E6%B3%95/" rel="tag">搜索语法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6/" rel="tag">权限控制</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E8%A7%A3/" rel="tag">注解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%98%E9%92%A5%E5%AF%B9/" rel="tag">秘钥对</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/tags/sudo/" style="font-size: 10px;">sudo</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E4%BB%A3%E7%A0%81%E4%BA%BA%E7%94%9F/" style="font-size: 10px;">代码人生</a> <a href="/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" style="font-size: 10px;">安装教程</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">工具</a> <a href="/tags/%E6%8B%A6%E6%88%AA%E5%99%A8/" style="font-size: 10px;">拦截器</a> <a href="/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/" style="font-size: 10px;">搜索引擎</a> <a href="/tags/%E6%90%9C%E7%B4%A2%E8%AF%AD%E6%B3%95/" style="font-size: 10px;">搜索语法</a> <a href="/tags/%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6/" style="font-size: 10px;">权限控制</a> <a href="/tags/%E6%B3%A8%E8%A7%A3/" style="font-size: 10px;">注解</a> <a href="/tags/%E7%A7%98%E9%92%A5%E5%AF%B9/" style="font-size: 10px;">秘钥对</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/posts/f512793/">SpringBoot中使用自定义注解和拦截器实现简单的权限控制</a>
+          </li>
+        
+          <li>
+            <a href="/posts/20a80768/">写给软件234，也给两年前的自己</a>
+          </li>
+        
+          <li>
+            <a href="/posts/d4439880/">在Linux上创建新用户并配置SSH免密连接</a>
+          </li>
+        
+          <li>
+            <a href="/posts/ff1f1596/">如何高效检索信息：搜索引擎使用小技巧</a>
+          </li>
+        
+          <li>
+            <a href="/posts/f682a309/">远程连接终端——WindTerm安装使用教程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 云景<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
 
 
 
-<script defer>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
-    for (let id of Object.keys(ctx.services)) {
-      const js = ctx.services[id].js;
-      if (id == 'siteinfo') {
-        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
-        if (ctx.cardlinks?.length > 0) {
-          utils.js(js, { defer: true }).then(function () {
-            setCardLink(ctx.cardlinks);
-          });
-        }
-      } else {
-        const els = document.getElementsByClassName(`ds-${id}`);
-        if (els?.length > 0) {
-          utils.jq(() => {
-            if (id == 'timeline' || 'memos' || 'marked') {
-              utils.js(deps.marked).then(function () {
-                utils.js(js, { defer: true });
-              });
-            } else {
-              utils.js(js, { defer: true });
-            }
-          });
-        }
-      }
-    }
-  });
-</script>
-
-<script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.search = {
-      path: `/search.json`,
-    }
-    utils.js('/js/search/local-search.js', { defer: true });
-  });
-</script><script>
-  window.FPConfig = {
-    delay: 0,
-    ignoreKeywords: [],
-    maxRPS: 5,
-    hoverDelay: 25
-  };
-</script>
-<script defer src="https://cdn.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazy",
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    window.lazyLoadInstance?.update();
-  });
-</script><script>
-  ctx.fancybox = {
-    selector: `.timenode p>img`,
-    css: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
-    js: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
-  };
-  var selector = '[data-fancybox]:not(.error)';
-  if (ctx.fancybox.selector) {
-    selector += `, ${ctx.fancybox.selector}`
-  }
-  var needFancybox = document.querySelectorAll(selector).length !== 0;
-  if (!needFancybox) {
-    const els = document.getElementsByClassName('ds-memos');
-    if (els != undefined && els.length > 0) {
-      needFancybox = true;
-    }
-  }
-  if (needFancybox) {
-    utils.css(ctx.fancybox.css);
-    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
-      Fancybox.bind(selector, {
-        hideScrollbar: false,
-        Thumbs: {
-          autoStart: false,
-        },
-        caption: (fancybox, slide) => {
-          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
-        }
-      });
-    })
-  }
-</script>
-<script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const swiper_api = document.getElementById('swiper-api');
-    if (swiper_api != undefined) {
-      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
-      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
-        const effect = swiper_api.getAttribute('effect') || '';
-        var swiper = new Swiper('.swiper#swiper-api', {
-          slidesPerView: 'auto',
-          spaceBetween: 8,
-          centeredSlides: true,
-          effect: effect,
-          rewind: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
-      })
-    }
-  });
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    window.codeElements = document.querySelectorAll('.code');
-    if (window.codeElements.length > 0) {
-      ctx.copycode = {
-        default_text: `Copy`,
-        success_text: `Copied`,
-        toast: `复制成功`,
-      };
-      utils.js('/js/plugins/copycode.js');
-    }
-  });
-</script>
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
 
 
-<!-- inject -->
 
-</div></body></html>
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
