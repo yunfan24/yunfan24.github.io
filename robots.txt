@@ -1,17 +1,4 @@
 User-agent: *
-Allow: /
-Allow: /home/
-Allow: /archives/
-Allow: /categories/
-Allow: /tags/
-Allow: /archive/
-Allow: /posts/
-Allow: /resources/ 
-Disallow: /js/
-Disallow: /css/
-Disallow: /fonts/
-Disallow: /vendors/
-Disallow: /fancybox/
-
-Sitemap: https://www.zzrl.cc/sitemap.xml
-Sitemap: https://www.zzrl.cc/baidusitemap.xml
+Disallow: /tags/
+Disallow: /page/
+Disallow: /categories/
